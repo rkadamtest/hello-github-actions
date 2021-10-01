@@ -1,6 +1,9 @@
 name: A workflow for my Hello World file
 on: push
 
+env:
+  NAME_PARAMETER: ${{ secrets.MY_NAME }}
+  
 jobs:
   build:
     name: Hello world action
@@ -9,4 +12,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: "Ramesh"
+          MY_NAME: "${{ env.NAME_PARAMETER }}"
