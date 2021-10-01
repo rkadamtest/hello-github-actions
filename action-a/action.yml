@@ -1,0 +1,16 @@
+name : "Hello Actions"
+description: "Greetings"
+author : "Ramesh Kadam"
+
+inputs:
+  MY_NAME:
+    description: "Message"
+    required: true
+    default: "World"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
