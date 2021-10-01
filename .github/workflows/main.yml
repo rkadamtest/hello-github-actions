@@ -12,4 +12,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: ${{ env.NAME_PARAMETER }}
+          MY_NAME: "${{ env.NAME_PARAMETER }}"
